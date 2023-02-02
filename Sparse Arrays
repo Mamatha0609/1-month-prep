@@ -1,0 +1,21 @@
+ Map<String,Integer> map = new HashMap<>();
+        ArrayList<Integer> results= new ArrayList<>();
+        for(int i=0;i<strings.size();i++){
+            String input = strings.get(i);
+            if(map.containsKey(input)){
+                map.put(input,map.get(input)+1);
+            }
+            else{
+                map.put(input,1);
+            }
+        }
+        for(int i=0;i<queries.size();i++){
+            String qstr = queries.get(i);
+            if(map.containsKey(qstr)){
+                results.add(map.get(qstr));
+            }
+            else{
+                results.add(0);
+            }
+        }
+        return results;
