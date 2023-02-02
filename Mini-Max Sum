@@ -1,0 +1,14 @@
+Collections.sort(arr);
+    long sum=0;
+    long min=0;
+    long max=0;
+    int len=arr.size();
+    for(int i=0;i<len;i++)
+    {
+        sum += arr.get(i);
+    }
+    min=sum - arr.get(len-1);
+    max=sum - arr.get(0);
+    System.out.print(min+" "+max);
+
+    
