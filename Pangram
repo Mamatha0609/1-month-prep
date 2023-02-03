@@ -1,0 +1,17 @@
+ public static String pangrams(String s) {
+        s = s.toLowerCase();
+        String result ="";
+        boolean allLetterPresent = true;
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            if (!s.contains(String.valueOf(ch))) {
+                allLetterPresent = false;
+                break;
+            }
+        }
+        if (allLetterPresent)
+            result += "pangram";
+        else
+            result += "not pangram";
+        
+        return result;
+    }
