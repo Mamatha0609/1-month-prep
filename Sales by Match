@@ -1,0 +1,15 @@
+public static int sockMerchant(int n, List<Integer> ar) {
+        Set<Integer> list = new HashSet<Integer>();
+        int pairs = 0;
+        for(int i= 0; i < n; i++){
+            if(list.contains(ar.get(i))){
+                pairs++;
+                list.remove(ar.get(i));
+            }
+            else{
+                list.add(ar.get(i));
+            }
+        }
+        return pairs;
+
+    }
