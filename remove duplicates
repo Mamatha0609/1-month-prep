@@ -1,0 +1,18 @@
+static void removeDup(char str[], int n)
+    {
+        HashSet<Character> set = new LinkedHashSet<>();
+        for (char ch : str)
+            set.add(ch);
+
+        for (char s : set)
+            System.out.print(s);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String string = sc.nextLine();
+        char str[] = string.toCharArray();
+        int n = str.length;
+ 
+        removeDup(str, n);
+    }
