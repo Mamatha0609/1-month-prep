@@ -1,0 +1,27 @@
+public static int cookies(int k, List<Integer> A) {
+        if (A == null || A.size() < 1) 
+            return -1;
+            
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
+        for (Integer a: A) 
+        {
+            heap.add(a);
+        }
+        int count = 0;
+        while (heap.size() > 1 && heap.peek().intValue() < k) 
+        {
+            int min = heap.peek().intValue();
+            int val = heap.poll().intValue() + 2 * heap.poll().intValue();
+            if (val < min) 
+              return -1;
+            heap.add(Integer.valueOf(val));
+            count++;
+        }
+        if (heap.size() == 0)
+            return -1;
+
+        if (heap.peek().intValue() >= k) 
+            return count;
+        else 
+            return -1;
+    }
