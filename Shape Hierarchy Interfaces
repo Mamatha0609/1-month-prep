@@ -1,0 +1,72 @@
+import java.io.*;
+
+import java.util.*;
+
+import java.text.*;
+
+import java.math.*;
+
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        double g=22.0/7;
+
+        Scanner sc = new Scanner(System.in);
+
+        int n=sc.nextInt();
+
+        for(int i=0;i<n;i++){
+
+            String s=sc.next();
+
+            if(s.equals("R")){
+
+                int l=sc.nextInt();
+
+                int b=sc.nextInt();
+
+                double p=2.0*(l+b);
+
+                double a=l*b*1.0;
+
+                System.out.print(String.format("%.2f\t",a));
+
+                System.out.println(String.format("%.2f",p));
+
+            }
+
+            else if(s.equals("S")){
+
+                int l=sc.nextInt();
+
+                double a=l*l*1.0;
+
+                double p=4.0*l;
+
+                System.out.print(String.format("%.2f\t",a));
+
+                System.out.println(String.format("%.2f",p));      
+
+            }
+
+            else{
+
+                int l=sc.nextInt();
+
+                double a=g*l*l;
+
+                double p=2*g*l;
+
+                System.out.print(String.format("%.2f\t",a));
+
+                System.out.println(String.format("%.2f ",p));
+
+            }
+
+        }
+    }
+
+}
